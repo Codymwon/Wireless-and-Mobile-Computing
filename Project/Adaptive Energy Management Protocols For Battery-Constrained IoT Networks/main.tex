@@ -1,0 +1,237 @@
+\documentclass[a4paper,fleqn]{cas-dc}
+\usepackage[numbers]{natbib}
+
+\usepackage{mathtools}
+\usepackage{booktabs}
+
+\usepackage{flushend}
+
+
+\usepackage{graphicx}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{amsmath}
+\usepackage{amssymb}  % Add this for \mathbb
+\usepackage{tikz}
+\usepackage{subcaption}
+\usepackage[utf8]{inputenc}
+\usepackage{tabularx} % Required for adjustable-width columns
+\usepackage{booktabs} % Required for professional-looking horizontal lines
+
+\numberwithin{equation}{section}
+
+\begin{document}
+\let\WriteBookmarks\relax
+\def\floatpagepagefraction{1}
+\def\textpagefraction{.001}
+
+\shorttitle{Energy Management in Battery-Constrained IoT Networks}
+\shortauthors{Aadith M Mathew et~al.}
+
+\title [mode = title]{Adaptive Energy Management Protocols For Battery-Constrained IoT Networks}                      
+
+%name: aadith m mathew
+%reg no: 23mic7005
+%gmail:aadithmathew2017@gmail.com
+%vitapmail:aadith.23mic7005@vitapstudent.ac.in
+%orcid:0009-0005-0660-1207
+
+
+
+\author[1]{S Gopikrishnan}[orcid=0000-0001-9082-9012]
+\ead{gopikrishnan.s@vitap.ac.in}
+\address[1]{School of Computer Science and Engineering, VIT-AP University, Amaravathi. Andhra Pradesh, India}
+
+
+\author[1]{Author-2} [orcid=0000-0001-9082-9012]
+\cormark[1]
+\ead{gopikrishnan.s@vitap.ac.in}
+
+
+\author[3]{Author-3} [orcid=0000-0001-9082-9012]
+\ead{gopikrishnan.s@vitap.ac.in}
+
+
+\cortext[cor1]{Corresponding author}
+
+\begin{abstract}
+The growing proliferation of devices on the Internet of Things (IoT) has made modern networks increasingly vulnerable to sophisticated cyber threats. Traditional intrusion detection systems (IDS) struggle to maintain high detection accuracy in the presence of high-dimensional data and extreme class imbalance, particularly for rare but critical attacks. The growing proliferation of devices on the Internet of Things (IoT) has made modern networks increasingly vulnerable to sophisticated cyber threats. Traditional intrusion detection systems (IDS) struggle to maintain high detection accuracy in the presence of high-dimensional data and extreme class imbalance, particularly for rare but critical attacks. The growing proliferation of devices on the Internet of Things (IoT) has made modern networks increasingly vulnerable to sophisticated cyber threats. Traditional intrusion detection systems (IDS) struggle to maintain high detection accuracy in the presence of high-dimensional data and extreme class imbalance, particularly for rare but critical attacks. The growing proliferation of devices on the Internet of Things (IoT) has made modern networks increasingly vulnerable to sophisticated cyber threats. Traditional intrusion detection systems (IDS) struggle to maintain high detection accuracy in the presence of high-dimensional data and extreme class imbalance, particularly for rare but critical attacks. The growing proliferation of devices on the Internet of Things (IoT) has made modern networks increasingly vulnerable to sophisticated cyber threats. Traditional intrusion detection systems (IDS) struggle to maintain high detection accuracy in the presence of high-dimensional data and extreme class imbalance, particularly for rare but critical attacks.
+\end{abstract}
+
+\begin{keywords}
+Intrusion Detection System (IDS) \sep 
+Internet of Things (IoT) \sep 
+Class Imbalance \sep 
+Feature Selection \sep
+Deep Learning \sep 
+Convolutional neural networks (CNN) \sep
+Data Augmentation
+\end{keywords}
+
+
+\maketitle
+
+
+
+\section{Introduction}
+The Internet of Things (IoT) has become a core technology for large-scale sensing and automation in applications such as smart cities, healthcare, industrial monitoring, and intelligent transportation systems. However, the widespread deployment of IoT devices is fundamentally constrained by limited battery capacity, particularly in remote or inaccessible environments. Energy inefficiency leads to premature node failure, reduced network lifetime, and degraded quality of service. Consequently, energy-aware protocol design has become a critical research focus in battery-constrained IoT networks, motivating extensive investigation into adaptive and intelligent energy management solutions \cite{Jadhav_Ranpise_Jadhav_2025}, \cite{Godfrey_Suh_Lim_Lee_Kim_2023}.
+
+A major source of energy consumption in IoT nodes is continuous sensing, idle listening, and redundant packet transmission. Traditional IoT protocols rely on fixed duty cycles and static operational parameters, which are unable to adapt to dynamic traffic patterns and varying network conditions. Several studies demonstrate that such static configurations cause unnecessary energy depletion, while adaptive duty cycling and event-driven communication can significantly reduce energy usage without compromising data reliability or network performance \cite{Jadhav_Ranpise_Jadhav_2025}, \cite{Lee_Lee_2025}.
+
+To address the limitations of static protocols, recent research has explored intelligent energy management techniques at different layers of the IoT stack. Reinforcement learning–based routing and resource management approaches have shown improvements in energy efficiency, packet delivery ratio, and adaptability in dynamic environments \cite{Godfrey_Suh_Lim_Lee_Kim_2023}, \cite{Hussain_Noor_Qureshi_2025}. Similar learning-driven strategies have been applied to large-scale and vehicular IoT systems, further enhancing network lifetime and performance \cite{Alponse_Yaashuwanth_2025}. However, the computational and memory overhead associated with such methods limits their applicability to resource-constrained IoT nodes.
+
+In response to these challenges, lightweight intelligence and rule-based adaptation mechanisms have gained attention as practical alternatives. Context-aware energy management frameworks that exploit residual energy, traffic urgency, and value-of-information metrics achieve effective energy savings without incurring the complexity of full-scale learning models \cite{Abed_Al_askari_2025}. Additionally, adaptive protocol selection schemes based on simplified decision rules have demonstrated reduced energy consumption while maintaining low processing and memory requirements, making them suitable for battery-powered IoT deployments \cite{Al-Sammak_Al-Gburi_Marghescu_etal_2025}.
+
+Adaptive duty cycling and communication management represent another key direction in energy-efficient IoT design. Dynamic sleep–wake scheduling significantly reduces energy waste caused by idle listening and unnecessary transmissions, especially in low-traffic and event-driven scenarios. When combined with adaptive communication control, these mechanisms can extend node lifetime while preserving acceptable latency and packet delivery ratio \cite{Jadhav_Ranpise_Jadhav_2025}, \cite{Mustafa_Sarkar_Mohaaghegh_Pervez_2025}. Cross-layer approaches further enhance efficiency by coordinating decisions across multiple protocol layers without compromising reliability or security \cite{Ahmad_Manzoor_Naqvi_2025}.
+
+Recent studies emphasize real-time and application-aware adaptive transmission strategies for practical IoT deployments. In particular, adaptive transmission control mechanisms for low-power wide-area networks dynamically adjust communication behavior based on data variation and network conditions, resulting in substantial reductions in packet transmissions and energy consumption while maintaining monitoring accuracy \cite{Zatuchin_Azarskov_2025}. These findings confirm that lightweight, real-time adaptation can achieve significant energy savings without introducing excessive computational overhead.
+
+Software-defined and optimization-driven IoT architectures have also been investigated to improve global energy efficiency. SDN-based frameworks enable centralized awareness of network conditions, facilitating energy-aware routing and adaptive reconfiguration. Trust-aware and energy-optimized SDN solutions have shown improvements in energy consumption, throughput, and latency by jointly considering residual energy and traffic dynamics \cite{Prauzek_Gaiova_Kucova_Konecny_2025}. However, the reliance on centralized control and complex optimization can limit scalability in highly constrained IoT environments.
+
+Despite considerable progress, several research gaps remain. Many existing approaches focus on isolated aspects of energy efficiency, such as routing or duty cycling, rather than providing an integrated adaptive energy management protocol. Moreover, intelligent solutions with strong performance gains often impose computational overhead unsuitable for low-power devices. Therefore, there is a clear need for lightweight, autonomous frameworks that dynamically adapt node operations based on residual energy, traffic patterns, sensor events, and network conditions \cite{Lee_Lee_2025}, \cite{Abed_Al_askari_2025}.
+
+Motivated by these challenges, this paper proposes adaptive energy management protocols for battery-constrained IoT networks. The proposed approach dynamically adjusts node operations according to residual energy and prevailing network conditions, incorporates lightweight intelligence through simplified learning and rule-based decision mechanisms, and optimizes duty cycling and communication management based on traffic patterns and node roles. The effectiveness of the proposed protocol is evaluated through simulation-based performance analysis using metrics such as network lifetime, energy consumption, packet delivery ratio, and latency \cite{Jadhav_Ranpise_Jadhav_2025}–\cite{Al-Sammak_Al-Gburi_Marghescu_etal_2025}.
+
+\subsection{Objective}
+Based on the challenges posed by the battery capacity in the IoT network, the first objective is to design an adaptive energy management protocol that dynamically adjusts the operations of the nodes based on the remaining energy and the network conditions. The existing IoT protocols have been shown to perform poorly in dynamic environments due to their fixed duty cycles and operational parameters. The objective will aim to reduce unnecessary energy consumption.
+
+The second objective is focused on incorporating lightweight intelligence into the proposed protocol. While reinforcement learning and adaptive protocol selection methods have been shown to improve energy efficiency, their computational complexity may hinder their practical implementation. As a result, simplified learning algorithms and rule-based adaptation are used to facilitate autonomous and energy-aware decision-making without incurring significant processing or memory overhead.
+
+The third objective aims to optimize energy consumption by adaptive duty cycling and communication management based on traffic patterns, sensor events, and node roles in the network. Continuous sensing, idle listening, and redundant transmissions are major contributors to energy exhaustion in IoT networks. By managing sleep--wake cycles and communication activities, the third objective aims to realize significant energy savings while maintaining acceptable network performance.
+
+In order to test the validity of the proposed approach, the fourth objective involves a simulation-based performance analysis and comparison of the proposed approach with the existing energy-efficient IoT solutions. The performance analysis will be carried out based on the following key performance metrics: network lifetime, energy consumption, packet delivery ratio, and latency.
+
+
+\section{Literature Survey}
+\cite{Nath_Kundu_Sharma_Srivhare_Afzal_Soudagar_Park_2024}. The paper proposes integrating IoT with solar energy systems for efficient energy monitoring and battery management. Its advantage lies in extending node lifetime using renewable energy and real-time control. However, it lacks a lightweight adaptive protocol and does not address dynamic energy management in battery-constrained IoT networks.
+\cite{Schuhmacher_Fernandez_Landivar_Gryech_Sallouha_Rossi_Pollin_2026}.The paper presents a systematic review on applying edge-based machine learning to improve energy efficiency and sustainability in IoT networks. Its advantage is comprehensive analysis with real hardware validation. However, it does not propose a unified adaptive energy management protocol and highlights limited large-scale, battery-constrained IoT implementations.
+\cite{Mohammad_Billah_Hasan_Hussain_2024}The paper proposes Green IoT–based energy-efficient communication strategies for large-scale IoT deployments. Its advantage is the comprehensive discussion of software- and hardware-level techniques to reduce energy consumption. However, it does not present a concrete adaptive energy management protocol and lacks validation in dynamic, battery-constrained IoT networks.
+\cite{Morgan_Ali_2025}.The paper presents a comprehensive review identifying major causes of energy inefficiency in IoT networks and proposes a strategic optimisation framework using adaptive protocols, fuzzy logic, and bio-inspired algorithms. Its strength lies in holistic analysis across IoT layers. However, it lacks a concrete lightweight adaptive protocol with real-time implementation for battery-constrained IoT nodes.
+\cite{Boah_Ampofowaa_Asiedu_OseiWusu_2025}.The paper conducts a systematic review of energy-efficient routing protocols for IoT networks, comparing cluster-based, chain-based, hybrid, and AI-based approaches. Its advantage is the comprehensive performance analysis in terms of energy, delay, and security. However, it does not propose a novel adaptive protocol and highlights high complexity and limited practicality for battery-constrained IoT nodes.
+\cite{Thakur_Sarkar_Yongchareon_2025}.The paper presents a comprehensive review of AI-driven energy-efficient routing techniques for IoT-based wireless sensor networks. Its advantage lies in systematically comparing classical and AI-based routing methods to improve network lifetime. However, it does not propose a concrete adaptive energy management protocol and highlights computational overhead and scalability issues in battery-constrained IoT nodes.
+\cite{Sharma_Verma_2025}.The paper reviews the application of artificial intelligence techniques for energy management in smart grids and IoT-enabled energy systems. Its advantage lies in detailed analysis of AI methods for forecasting and optimization. However, it lacks a lightweight, adaptive energy management protocol specifically designed for battery-constrained IoT networks.
+\cite{Kamal_Abbas_Kadhum_2024}.The paper reviews energy harvesting techniques for self-powered IoT devices, analyzing solar, thermal, RF, and mechanical sources. Its advantage is the detailed comparison of harvesting methods and sustainability benefits. However, it does not integrate adaptive energy management protocols and highlights issues of intermittency, low efficiency, and energy storage limitations in battery-constrained IoT networks.
+\cite{Reddy_Kumar_2025}.The paper proposes an adaptive multi-region gateway-based energy-efficient routing protocol (AMGEERP) for WSN-IoT networks, using region-based clustering, energy-aware cluster head selection, and gateway-assisted routing. Its advantage is significant improvement in network lifetime and energy efficiency. However, it assumes static nodes and increases complexity due to gateways and multi-region management.
+\cite{Alhasnawi_Al_Saegh_2025}The paper proposes a federated reinforcement learning–based framework with BiLSTM–GRU prediction for dynamic task scheduling and resource allocation in edge-enabled IoT systems. Its advantage is improved energy efficiency, fairness, and privacy. However, it introduces high computational complexity and is less suitable for lightweight, battery-constrained IoT nodes. 
+
+\begin{table*}[t]
+\centering
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{|p{1.2cm}|p{4.2cm}|p{5.0cm}|p{5.0cm}|p{5.0cm}|}
+\hline
+\textbf{Ref.} & \textbf{Method Proposed} & \textbf{Techniques Used} & \textbf{Issues Resolved} & \textbf{Limitations} \\
+\hline
+{[\cite{Latif_Drieberg_Sarang_2025}]} &
+RL-based intelligent duty cycle MAC protocol (RiD-MAC) &
+Q-learning, energy-aware state design, adaptive duty cycling &
+Improves energy efficiency; adapts to dynamic traffic and residual energy conditions &
+Higher packet delay trade-off; increased MAC-layer complexity; simulation-based validation only \\
+\hline
+{[\cite{Bharathi_Kannadhasan_Padminidevi_Maharajan_Nagarajan_Tonmoy_2022}]} &
+Energy-efficient predictive clustering and routing for IoT-based WSN &
+Particle Swarm Optimization (PSO), predictive models, energy-aware clustering, multihop routing &
+Reduces energy consumption; improves network lifetime and throughput &
+High computational overhead; complex design; limited suitability for lightweight battery-constrained IoT nodes \\
+\hline
+{[\cite{Narkedimilli_Makam_Sriram_Mallellu_Sathvik_Pradh_2025}]} &
+Adaptive curriculum learning–based IoT intrusion detection framework with XAI &
+Curriculum learning, GRU–LSTM with attention, LIME-based explainable AI, pruning, ensemble learning &
+Improves detection accuracy, scalability, and interpretability in IoT environments &
+Primarily focuses on security rather than energy management; computational overhead; indirect relevance to battery-constrained energy optimization \\
+\hline
+{[\cite{WSNIOT_EnergyEfficientRouting_2024}]} &
+Review of energy-efficient routing protocols for IoT-enabled WSNs &
+Clustering (LEACH, HEED), chain-based routing (PEGASIS), threshold-based routing (TEEN) &
+Identifies techniques to reduce energy consumption and extend network lifetime &
+Review-based only; no novel adaptive protocol; limited focus on dynamic and heterogeneous battery-constrained IoT networks \\
+\hline
+{[\cite{Khan_Inayat_Muslim_Shah_Rehman_Khalid_Imran_Abdusalomov_2024}]} &
+Flexible ASIC-based hardware realization of Ascon lightweight cipher for IoT &
+Loop-folded, loop-unrolled, fully unrolled architectures; lightweight authenticated encryption (Ascon-128/128a) &
+Enables secure data transmission with area–throughput–energy trade-offs for constrained IoT devices &
+Focuses on security hardware rather than network-level energy management; higher area and power cost for fully unrolled designs \\
+\hline
+{[\cite{Schulthess_Cortesi_Magno_2025}]} &
+Ultra-low-power wake-up radio–based on-demand communication module (WakeMod) &
+Wake-up radio (WuR), OOK modulation, adaptive data rates, asynchronous communication &
+Eliminates idle listening overhead; reduces latency–energy trade-off; extends battery lifetime &
+Requires additional hardware module; hardware-layer focus; limited protocol-level adaptive energy management \\
+\hline
+{[\cite{Baniata_Reda_Chilamkurti_Abuadbba_2021}]} &
+MIMO-based energy-efficient unequal hybrid clustering routing protocol (MIMO-HC) for IoT in 5G &
+Unequal clustering, MIMO communication, hybrid single-hop/chain topology, probabilistic multihop routing &
+Reduces energy consumption; balances load; mitigates hotspot problem; extends network lifetime &
+Centralized design; assumes static nodes and MIMO capability; higher complexity; limited suitability for highly resource-constrained IoT nodes \\
+\hline
+{[\cite{Sayel_Razzaq_2025}]} &
+Comparative evaluation with hybrid adaptive energy-efficient routing scheme for WSN-IoT &
+Clustering (LEACH, ILEACH), multichain PEGASIS, gateway-based routing (M-GEAR), energy-aware simulations &
+Improves network lifetime, load balancing, and energy conservation &
+Mainly comparative and simulation-based; limited real-world validation; not a lightweight adaptive protocol for highly dynamic IoT networks \\
+\hline
+{[\cite{Zhang_Chen_Qiu_Zhuang_Wang_Liu_2023}]} &
+Robust PSSS-based timing synchronization algorithm for LTE-V2X &
+Block cross-correlation, selective summing, frequency offset estimation, threshold optimization, hardware-in-loop validation &
+Improves synchronization accuracy under high Doppler shift and low SNR conditions &
+Focused on synchronization rather than energy management; higher computational complexity; limited relevance to battery-constrained IoT energy protocols \\
+\hline
+{[\cite{Deshpande_Chiariotti_Zanella_2024}]} &
+Content-based wake-up radio (WUR)–based energy-efficient IoT monitoring scheme &
+Wake-up radio, value-of-information (VoI) thresholds, Kalman filter estimation, adaptive polling &
+Reduces unnecessary transmissions; improves battery lifetime while controlling estimation error &
+Requires additional WUR hardware; increased design complexity; mainly suited for monitoring applications rather than general adaptive energy protocols \\
+\hline
+\end{tabular}
+\caption{Comparative Analysis of Existing Methods Related to Energy-Efficient and Adaptive IoT Systems}
+\label{tab:related_work_comparison}
+\end{table*}
+
+\subsection{Research Gaps}
+The review of existing literature reveals that significant efforts have been made to improve energy efficiency in IoT networks through protocol optimization, intelligent routing, duty cycling, and adaptive communication mechanisms. Protocols such as DUROCOM and adaptive protocol selection frameworks demonstrate that context-aware operation and multi-radio strategies can improve energy efficiency and network lifetime. Similarly, reinforcement learning–based approaches, including deep Q-network routing and RL-SCAP for LPWANs, show notable gains in adaptability and energy optimization. However, these approaches often introduce increased computational complexity, memory overhead, or reliance on centralized decision-making, which limits their suitability for battery-constrained IoT nodes.
+
+Several studies emphasize adaptive duty cycling and intelligent switching to reduce idle listening and redundant transmissions, yet they typically focus on isolated protocol layers or specific application scenarios. Moreover, security- and cryptography-focused studies address energy-aware lightweight encryption but do not integrate energy management at the protocol level. Overall, the literature lacks a unified adaptive energy management protocol that simultaneously considers residual energy, network conditions, traffic dynamics, and node roles while remaining lightweight enough for practical deployment. Additionally, many existing solutions are evaluated in constrained or static scenarios, highlighting the need for comprehensive simulation-based validation under dynamic IoT conditions.
+
+\subsection{Motivation}
+The motivation for this research arises from the growing disparity between the increasing intelligence of IoT applications and the limited energy resources of IoT devices. While advanced learning-based and optimization-driven techniques have demonstrated energy efficiency improvements, their practical applicability is constrained by the limited processing power, memory capacity, and battery life of typical IoT nodes. As IoT deployments continue to scale in size and heterogeneity, there is a pressing need for adaptive solutions that can respond dynamically to changing network conditions without imposing excessive computational overhead.
+
+Furthermore, continuous sensing, idle listening, and static duty cycling remain dominant contributors to energy depletion in real-world IoT deployments. Existing protocols fail to autonomously adjust node behavior based on residual energy, traffic patterns, and event occurrences. This motivates the development of a lightweight, adaptive energy management protocol that integrates simplified intelligence, adaptive duty cycling, and communication management to extend network lifetime while maintaining acceptable performance. Such a solution is essential for ensuring the long-term sustainability and scalability of battery-constrained IoT networks.
+
+\subsection{Problem Statement}
+Despite extensive research on energy-efficient IoT communication, current IoT protocols largely rely on static operational parameters, fixed duty cycles, and non-adaptive communication schedules, which result in inefficient energy utilization under dynamic network conditions. Although intelligent and learning-based approaches have been proposed to address this issue, their high computational and memory requirements limit their feasibility for battery-constrained IoT nodes. Additionally, existing solutions often address energy efficiency in a fragmented manner, focusing on routing, duty cycling, or protocol selection independently, without providing an integrated adaptive energy management framework.
+
+Therefore, the core problem addressed in this research is the lack of a lightweight, unified, and adaptive energy management protocol that dynamically adjusts node operations based on residual energy, network conditions, traffic patterns, sensor events, and node roles. The problem further extends to the absence of comprehensive performance evaluation under realistic IoT scenarios. Addressing this problem requires the design of an adaptive protocol that minimizes unnecessary energy consumption while maintaining acceptable network performance, and its validation through simulation-based comparison with existing energy-efficient IoT solutions using standard performance metrics such as network lifetime, energy consumption, packet delivery ratio, and latency.
+
+\section{Conclusion}
+
+EFS-IDS is an efficient and scalable intrusion detection framework that can be used to overcome the shortcomings of traditional IDS in an IoT context due to the class imbalance problem.
+
+
+
+
+
+\section*{Declarations}
+\subsection*{Ethical Approval}
+This manuscript reports studies that do not involve human participants, human data, human tissue, or animals.
+
+\subsection*{Conflict of Interest}
+The authors have no conflict of interest to declare that are relevant to the content of this article.
+
+\subsection*{Authors' Contributions}
+S. Gopikrishnan contributed to the conceptualization, Formal analysis, drafting the original manuscript, and designing the experimental protocols. Author-2 was responsible for Conceptualization, methodology, software implementation, and data set curation. Author3 contributed to conceptualization, supervision, and in-depth analysis of the experimental results. Author-3 handled the review and editing of the final draft, as well as the overall validation of the study results.
+
+
+\subsection*{Funding}
+The authors did not receive financial support from any organization for the submitted work.
+
+\subsection*{Availability of data and materials}
+Data sharing is not applicable to this article, as no new data was created or analyzed in this study.
+
+\subsection*{Acknowledgment}
+We acknowledge that the hardware utilized in this research for evaluation is a part of the Intel IoT Center for Excellence, VIT-AP University. 
+
+\bibliographystyle{cas-model2-names}
+\bibliography{references}
+
+
+\end{document}
+
